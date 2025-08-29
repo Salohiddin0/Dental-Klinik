@@ -15,13 +15,13 @@ export function ContactsSection() {
       content:
         language === "ru"
           ? "г. Алматы, ул. Абая 150/230, БЦ 'Esentai Tower', 15 этаж"
-          : "Almaty sh., Abay ko'ch. 150/230, 'Esentai Tower' biznes markazi, 15-qavat",
+          : "Rishtan",
       action: language === "ru" ? "Показать на карте" : "Xaritada ko'rsatish",
     },
     {
       icon: Phone,
       title: t("contacts.phone"),
-      content: "+7 (727) 123-45-67",
+      content: "90 111 22 33",
       action: language === "ru" ? "Позвонить" : "Qo'ng'iroq qilish",
     },
     {
@@ -194,14 +194,14 @@ export function ContactsSection() {
                         : "Avtobuslar: 2, 12, 29. 'Esentai Mall' bekatida"}
                     </p>
                   </div>
-                  <div>
+                  {/* <div>
                     <h4 className="font-semibold text-foreground mb-2">{language === "ru" ? "Метро:" : "Metro:"}</h4>
                     <p className="text-sm text-muted-foreground">
                       {language === "ru"
                         ? "Станция 'Алмалы', 10 минут пешком"
                         : "'Almaly' stantsiyasi, 10 daqiqa piyoda"}
                     </p>
-                  </div>
+                  </div> */}
                 </div>
               </CardContent>
             </Card>

@@ -161,7 +161,7 @@ export function AppointmentSection() {
                           type="tel"
                           value={formData.phone}
                           onChange={(e) => handleInputChange("phone", e.target.value)}
-                          placeholder="+7 (___) ___-__-__"
+                          placeholder="+998_"
                           required
                           className="transition-all duration-200 focus:scale-[1.02]"
                         />
@@ -326,7 +326,7 @@ export function AppointmentSection() {
                   </p>
                   <Button variant="outline" className="w-full bg-transparent">
                     <Phone className="h-4 w-4 mr-2" />
-                    +7 (727) 123-45-67
+                   +998 90 111 22 33
                   </Button>
                 </CardContent>
               </Card>

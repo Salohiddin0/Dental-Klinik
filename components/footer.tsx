@@ -29,8 +29,8 @@ export function Footer() {
             </div>
             <p className="text-sm text-muted-foreground">
               {language === "ru"
-                ? "Современная стоматологическая клиника в Алматы с профессиональным подходом к лечению."
-                : "Almaty shahridagi zamonaviy stomatologiya klinikasi davolashga professional yondashuv bilan."}
+                ? "Современная стоматологическая клиника в Риштан с профессиональным подходом к лечению."
+                : "Rishton shahridagi zamonaviy stomatologiya klinikasi davolashga professional yondashuv bilan."}
             </p>
           </div>
 
@@ -82,12 +82,12 @@ export function Footer() {
               <div className="flex items-start space-x-2">
                 <MapPin className="h-4 w-4 text-primary mt-0.5" />
                 <span className="text-sm text-muted-foreground">
-                  {language === "ru" ? "г. Алматы, ул. Абая 150/230" : "Almaty sh., Abay ko'ch. 150/230"}
+                  {language === "ru" ? "Риштан" : "Rishtan"}
                 </span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-primary" />
-                <span className="text-sm text-muted-foreground">+7 (727) 123-45-67</span>
+                <span className="text-sm text-muted-foreground">+ 998 90 111 222 33</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-primary" />
@@ -106,7 +106,7 @@ export function Footer() {
 
         <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © 2024 {language === "ru" ? "Дентал Клиник" : "Dental Klinik"}.{" "}
+            © 2025 {language === "ru" ? "Дентал Клиник" : "Dental Klinik"}.{" "}
             {language === "ru" ? "Все права защищены." : "Barcha huquqlar himoyalangan."}
           </p>
         </div>
