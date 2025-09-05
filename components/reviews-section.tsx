@@ -103,7 +103,7 @@ export function ReviewsSection() {
         <div className="max-w-4xl mx-auto mb-16">
           <Card className="relative overflow-hidden bg-gradient-to-br from-primary/5 to-primary/10 border-primary/20">
             <CardHeader className="text-center pb-4">
-              <Quote className="h-12 w-12 text-primary/30 mx-auto mb-4" />
+              <Quote className="h-12 w-12 text-green-500/30 mx-auto mb-4" />
               <div className="flex justify-center mb-2">{renderStars(reviews[currentReview].rating)}</div>
             </CardHeader>
             <CardContent className="text-center">
@@ -141,7 +141,7 @@ export function ReviewsSection() {
                 key={index}
                 onClick={() => setCurrentReview(index)}
                 className={`w-3 h-3 rounded-full transition-colors ${
-                  index === currentReview ? "bg-primary" : "bg-muted-foreground/30"
+                  index === currentReview ? "bg-green-500" : "bg-muted-foreground/30"
                 }`}
               />
             ))}

@@ -112,7 +112,7 @@ export function Header () {
           <Button
             variant='ghost'
             size='sm'
-            className='md:hidden h-8 w-8 p-0'
+            className='md:hidden h-8 w-8 p-0 hover:bg-green-500'
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
@@ -144,13 +144,13 @@ export function Header () {
                   {/* Language Toggle Mobile */}
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                      <Button variant='ghost' size='sm'>
+                      <Button className='hover:bg-green-500' variant='ghost' size='sm'>
                         <Globe className='h-4 w-4 mr-2' />
                         {language === 'ru' ? 'RU' : 'UZ'}
                       </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align='start'>
-                      <DropdownMenuItem onClick={() => setLanguage('ru')}>
+                      <DropdownMenuItem  onClick={() => setLanguage('ru')}>
                         <span
                           className={language === 'ru' ? 'font-semibold' : ''}
                         >
@@ -168,7 +168,7 @@ export function Header () {
                   </DropdownMenu>
 
                   {/* Theme Toggle Mobile */}
-                  <Button
+                  <Button className='hover:bg-green-500'
                     variant='ghost'
                     size='sm'
                     onClick={() =>
@@ -184,7 +184,7 @@ export function Header () {
                 <Button
                   onClick={() => scrollToSection('#contacts')}
                   size='sm'
-                  className='bg-primary hover:bg-primary/90'
+                  className='bg-green-500 hover:bg-green-500/90'
                 >
                   {t('hero.cta')}
                 </Button>
