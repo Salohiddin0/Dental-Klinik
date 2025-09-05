@@ -20,7 +20,7 @@ export function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center">
+              <div className="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-sm">DC</span>
               </div>
               <span className="font-bold text-lg text-card-foreground">
@@ -29,8 +29,8 @@ export function Footer() {
             </div>
             <p className="text-sm text-muted-foreground">
               {language === "ru"
-                ? "Современная стоматологическая клиника в Риштан с профессиональным подходом к лечению."
-                : "Rishton shahridagi zamonaviy stomatologiya klinikasi davolashga professional yondashuv bilan."}
+                ? "Современная стоматологическая клиника в Фергана с профессиональным подходом к лечению."
+                : "Farg'ona shahridagi zamonaviy stomatologiya klinikasi davolashga professional yondashuv bilan."}
             </p>
           </div>
 
@@ -80,21 +80,21 @@ export function Footer() {
             <h3 className="font-semibold text-card-foreground">{t("footer.contacts")}</h3>
             <div className="space-y-3">
               <div className="flex items-start space-x-2">
-                <MapPin className="h-4 w-4 text-primary mt-0.5" />
+                <MapPin className="h-4 w-4 text-green-500 mt-0.5" />
                 <span className="text-sm text-muted-foreground">
-                  {language === "ru" ? "Риштан" : "Rishtan"}
+                  {language === "ru" ? "Фергана" : "Farg'ona"}
                 </span>
               </div>
               <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 text-primary" />
+                <Phone className="h-4 w-4 text-green-500" />
                 <span className="text-sm text-muted-foreground">+ 998 90 111 222 33</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Mail className="h-4 w-4 text-primary" />
+                <Mail className="h-4 w-4 text-green-500" />
                 <span className="text-sm text-muted-foreground">info@dentalclinic.kz</span>
               </div>
               <div className="flex items-start space-x-2">
-                <Clock className="h-4 w-4 text-primary mt-0.5" />
+                <Clock className="h-4 w-4 text-green-500 mt-0.5" />
                 <div className="text-sm text-muted-foreground">
                   <div>{language === "ru" ? "Пн-Пт: 09:00-20:00" : "Du-Ju: 09:00-20:00"}</div>
                   <div>{language === "ru" ? "Сб-Вс: 09:00-18:00" : "Sh-Ya: 09:00-18:00"}</div>

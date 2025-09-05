@@ -13,7 +13,7 @@ export function ReviewsSection() {
 
   const reviews = [
     {
-      name: language === "ru" ? "Анна Петрова" : "Anna Petrova",
+      name: language === "ru" ? "Анора Собирова" : "Anora Sobirova",
       service: language === "ru" ? "Имплантация зубов" : "Tish implantatsiyasi",
       rating: 5,
       date: language === "ru" ? "2 недели назад" : "2 hafta oldin",
@@ -25,7 +25,7 @@ export function ReviewsSection() {
       verified: true,
     },
     {
-      name: language === "ru" ? "Михаил Сидоров" : "Mikhail Sidorov",
+      name: language === "ru" ? "Азамат Собиров" : "Azamat Sobirov",
       service: language === "ru" ? "Лечение кариеса" : "Karies davolash",
       rating: 5,
       date: language === "ru" ? "1 месяц назад" : "1 oy oldin",
@@ -37,7 +37,7 @@ export function ReviewsSection() {
       verified: true,
     },
     {
-      name: language === "ru" ? "Елена Козлова" : "Elena Kozlova",
+      name: language === "ru" ? "Нигина Муродова" : "Nigina Murodova",
       service: language === "ru" ? "Отбеливание зубов" : "Tish oqartirish",
       rating: 5,
       date: language === "ru" ? "3 недели назад" : "3 hafta oldin",
@@ -49,7 +49,7 @@ export function ReviewsSection() {
       verified: true,
     },
     {
-      name: language === "ru" ? "Дмитрий Волков" : "Dmitriy Volkov",
+      name: language === "ru" ? "Абдурахмон Мирмахсудов" : "Abdurahmon Mirmaxsudov",
       service: language === "ru" ? "Установка брекетов" : "Breket o'rnatish",
       rating: 5,
       date: language === "ru" ? "2 месяца назад" : "2 oy oldin",
@@ -61,7 +61,7 @@ export function ReviewsSection() {
       verified: true,
     },
     {
-      name: language === "ru" ? "Мария Иванова" : "Mariya Ivanova",
+      name: language === "ru" ? "Mахлиё Абдуллаева" : "Mahliyo Abdullayeva",
       service: language === "ru" ? "Детская стоматология" : "Bolalar stomatologiyasi",
       rating: 5,
       date: language === "ru" ? "1 неделя назад" : "1 hafta oldin",
@@ -182,27 +182,6 @@ export function ReviewsSection() {
           ))}
         </div>
 
-        {/* Review Stats */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div>
-            <div className="text-3xl font-bold text-primary mb-2">4.9</div>
-            <div className="text-sm text-muted-foreground">
-              {language === "ru" ? "Средняя оценка" : "O'rtacha baho"}
-            </div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-primary mb-2">500+</div>
-            <div className="text-sm text-muted-foreground">{language === "ru" ? "Отзывов" : "Sharh"}</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-primary mb-2">98%</div>
-            <div className="text-sm text-muted-foreground">{language === "ru" ? "Рекомендуют" : "Tavsiya qiladi"}</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-primary mb-2">5000+</div>
-            <div className="text-sm text-muted-foreground">{language === "ru" ? "Пациентов" : "Bemor"}</div>
-          </div>
-        </div>
       </div>
     </section>
   )

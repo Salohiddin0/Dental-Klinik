@@ -80,8 +80,8 @@ export function ContactsSection() {
                     <Card key={index} className="hover:shadow-md transition-shadow duration-300">
                       <CardContent className="p-6">
                         <div className="flex items-start space-x-4">
-                          <div className="flex-shrink-0 p-3 bg-primary/10 rounded-lg">
-                            <IconComponent className="h-6 w-6 text-primary" />
+                          <div className="flex-shrink-0 p-3 bg-primary/15 rounded-lg">
+                            <IconComponent className="h-6 w-6 text-green-500" />
                           </div>
                           <div className="flex-1">
                             <h4 className="font-semibold text-foreground mb-2">{info.title}</h4>
@@ -102,7 +102,7 @@ export function ContactsSection() {
             <Card>
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2">
-                  <Clock className="h-5 w-5 text-primary" />
+                  <Clock className="h-5 w-5 text-green-500" />
                   <span>{language === "ru" ? "Часы работы" : "Ish vaqti"}</span>
                 </CardTitle>
               </CardHeader>
@@ -118,17 +118,17 @@ export function ContactsSection() {
                     </div>
                   ))}
                 </div>
-                <div className="mt-4 p-3 bg-primary/5 rounded-lg">
+                {/* <div className="mt-4 p-3 bg-primary/5 rounded-lg">
                   <p className="text-sm text-primary font-medium">
                     {language === "ru" ? "🚨 Экстренная помощь 24/7" : "🚨 Shoshilinch yordam 24/7"}
                   </p>
-                </div>
+                </div> */}
               </CardContent>
             </Card>
 
             {/* Quick Actions */}
             <div className="grid grid-cols-2 gap-4">
-              <Button onClick={scrollToAppointment} className="h-12">
+              <Button onClick={scrollToAppointment} className="h-12 bg-green-500">
                 {language === "ru" ? "Записаться онлайн" : "Onlayn yozilish"}
               </Button>
               <Button variant="outline" className="h-12 bg-transparent">
@@ -138,11 +138,11 @@ export function ContactsSection() {
           </div>
 
           {/* Map and Location */}
-          <div className="space-y-6">
+          <div className="space-y-6 mt-12">
             <Card className="overflow-hidden">
               <CardHeader>
                 <CardTitle className="flex items-center space-x-2">
-                  <Navigation className="h-5 w-5 text-primary" />
+                  <Navigation className="h-5 w-5 text-green-500" />
                   <span>{language === "ru" ? "Наше расположение" : "Bizning joylashuvimiz"}</span>
                 </CardTitle>
                 <CardDescription>
@@ -155,7 +155,7 @@ export function ContactsSection() {
                 {/* Placeholder for map - in real implementation, you'd use Google Maps or similar */}
                 <div className="h-64 bg-muted flex items-center justify-center">
                   <div className="text-center">
-                    <MapPin className="h-12 w-12 text-primary mx-auto mb-2" />
+                    <MapPin className="h-12 w-12 text-green-500 mx-auto mb-2" />
                     <p className="text-muted-foreground">
                       {language === "ru" ? "Интерактивная карта" : "Interaktiv xarita"}
                     </p>
@@ -163,48 +163,7 @@ export function ContactsSection() {
                 </div>
               </CardContent>
             </Card>
-
-            {/* Transportation Info */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center space-x-2">
-                  <Car className="h-5 w-5 text-primary" />
-                  <span>{language === "ru" ? "Как добраться" : "Qanday borish"}</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-2">
-                      {language === "ru" ? "На автомобиле:" : "Avtomobilda:"}
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      {language === "ru"
-                        ? "Бесплатная парковка на 50 мест. Вход с ул. Абая."
-                        : "50 o'rinli bepul to'xtash joyi. Abay ko'chasidan kirish."}
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-foreground mb-2">
-                      {language === "ru" ? "На общественном транспорте:" : "Jamoat transportida:"}
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      {language === "ru"
-                        ? "Автобусы: 2, 12, 29. Остановка 'Esentai Mall'"
-                        : "Avtobuslar: 2, 12, 29. 'Esentai Mall' bekatida"}
-                    </p>
-                  </div>
-                  {/* <div>
-                    <h4 className="font-semibold text-foreground mb-2">{language === "ru" ? "Метро:" : "Metro:"}</h4>
-                    <p className="text-sm text-muted-foreground">
-                      {language === "ru"
-                        ? "Станция 'Алмалы', 10 минут пешком"
-                        : "'Almaly' stantsiyasi, 10 daqiqa piyoda"}
-                    </p>
-                  </div> */}
-                </div>
-              </CardContent>
-            </Card>
+          
           </div>
         </div>
       </div>

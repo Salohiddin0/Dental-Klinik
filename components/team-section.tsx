@@ -135,32 +135,6 @@ export function TeamSection() {
             </Card>
           ))}
         </div>
-
-        {/* Team Stats */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="text-3xl font-bold text-primary mb-2">4</div>
-            <div className="text-sm text-muted-foreground">
-              {language === "ru" ? "Опытных врача" : "Tajribali shifokor"}
-            </div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-primary mb-2">45+</div>
-            <div className="text-sm text-muted-foreground">
-              {language === "ru" ? "Лет общего опыта" : "Yil umumiy tajriba"}
-            </div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-primary mb-2">15+</div>
-            <div className="text-sm text-muted-foreground">{language === "ru" ? "Специализаций" : "Ixtisoslik"}</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-primary mb-2">100%</div>
-            <div className="text-sm text-muted-foreground">
-              {language === "ru" ? "Сертифицированы" : "Sertifikatlangan"}
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   )

@@ -1,10 +1,10 @@
-"use client"
+'use client'
 
-import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-import { ArrowUp } from "lucide-react"
+import { useState, useEffect } from 'react'
+import { Button } from '@/components/ui/button'
+import { ArrowUp } from 'lucide-react'
 
-export function ScrollToTop() {
+export function ScrollToTop () {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
@@ -16,30 +16,32 @@ export function ScrollToTop() {
       }
     }
 
-    window.addEventListener("scroll", toggleVisibility)
-    return () => window.removeEventListener("scroll", toggleVisibility)
+    window.addEventListener('scroll', toggleVisibility)
+    return () => window.removeEventListener('scroll', toggleVisibility)
   }, [])
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth'
     })
   }
 
   return (
     <div
       className={`fixed bottom-8 right-8 z-50 transition-all duration-300 ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
+        isVisible
+          ? 'opacity-100 translate-y-0'
+          : 'opacity-0 translate-y-4 pointer-events-none'
       }`}
     >
       <Button
         onClick={scrollToTop}
-        size="icon"
-        className="h-12 w-12 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 bg-primary hover:bg-primary/90"
+        size='icon'
+        className='h-12 w-12 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 bg-green-500 hover:bg-green-600'
       >
-        <ArrowUp className="h-5 w-5" />
-        <span className="sr-only">Scroll to top</span>
+        <ArrowUp className='h-5 w-5 text-white' />
+        <span className='sr-only'>Scroll to top</span>
       </Button>
     </div>
   )
