@@ -18,23 +18,23 @@ export function ContactsSection () {
     {
       icon: MapPin,
       title: t('contacts.address'),
-      content:
-        language === 'ru'
-          ? "Фаргона"
-          : 'Farg\'ona',
-      action: language === 'ru' ? 'Показать на карте' : "Xaritada ko'rsatish"
+      content: language === 'ru' ? 'Фаргона' : "Farg'ona",
+      action: language === 'ru' ? 'Показать на карте' : "Xaritada ko'rsatish",
+      href: "https://maps.google.com/?q=Farg'ona" // Xaritaga link
     },
     {
       icon: Phone,
       title: t('contacts.phone'),
-      content: '90 111 22 33',
-      action: language === 'ru' ? 'Позвонить' : "Qo'ng'iroq qilish"
+      content: '+998 94 164 77 07',
+      action: language === 'ru' ? 'Позвонить' : "Qo'ng'iroq qilish",
+      href: 'tel: +998 94 164 77 07' // Telefon link
     },
     {
       icon: Mail,
       title: t('contacts.email'),
-      content: 'info@dentalclinic.kz',
-      action: language === 'ru' ? 'Написать' : 'Yozish'
+      content: 'sulaymonovsaloxiddin092@gmail.com',
+      action: language === 'ru' ? 'Написать' : 'Yozish',
+      href: 'sulaymonovsaloxiddin092@gmail.com' // Email link
     }
   ]
 
@@ -84,34 +84,33 @@ export function ContactsSection () {
                   : "Aloqa ma'lumotlari"}
               </h3>
               <div className='space-y-6'>
-                {contactInfo.map((info, index) => {
-                  const IconComponent = info.icon
-                  return (
-                    <Card
-                      key={index}
-                      className='hover:shadow-md transition-shadow duration-300'
-                    >
-                      <CardContent className='p-6'>
-                        <div className='flex items-start space-x-4'>
-                          <div className='flex-shrink-0 p-3 bg-primary/15 rounded-lg'>
-                            <IconComponent className='h-6 w-6 text-green-500' />
-                          </div>
-                          <div className='flex-1'>
-                            <h4 className='font-semibold text-foreground mb-2'>
-                              {info.title}
-                            </h4>
-                            <p className='text-muted-foreground mb-3'>
-                              {info.content}
-                            </p>
-                            <Button variant='outline' size='sm'>
-                              {info.action}
-                            </Button>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  )
-                })}
+                {contactInfo.map((info, index) => (
+                  <Card
+                    key={index}
+                    className='p-4 flex items-start space-x-4 bg-muted'
+                  >
+                    <div className='flex-shrink-0 p-3 bg-primary/10 rounded-lg'>
+                      <info.icon className='h-6 w-6 text-green-500' />
+                    </div>
+                    <div className='flex-1'>
+                      <h3 className='font-semibold'>{info.title}</h3>
+                      <p className='text-sm text-muted-foreground'>
+                        {info.content}
+                      </p>
+
+                      {/* Action Button */}
+                      <a
+                        href={info.href}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                      >
+                        <Button variant='outline' size='sm' className='mt-2'>
+                          {info.action}
+                        </Button>
+                      </a>
+                    </div>
+                  </Card>
+                ))}
               </div>
             </div>
 
@@ -149,16 +148,26 @@ export function ContactsSection () {
 
             {/* Quick Actions */}
             <div className='grid grid-cols-2 gap-4'>
-              <Button
-                onClick={scrollToAppointment}
-                className='h-12 bg-green-500'
-              >
-                {language === 'ru' ? 'Записаться онлайн' : 'Onlayn yozilish'}
+              <Button asChild className='h-12 bg-green-500'>
+                <a
+                  href='https://t.me/ismailxan'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  {language === 'ru' ? 'Записаться онлайн' : 'Onlayn yozilish'}
+                </a>
               </Button>
+
               <Button variant='outline' className='h-12 bg-transparent'>
-                {language === 'ru'
-                  ? 'Экстренный вызов'
-                  : 'Shoshilinch chaqiruv'}
+                <a
+                  href='https://t.me/ismailxan'
+                  target='_blank'
+                  rel='noopener norefrrer'
+                >
+                  {language === 'ru'
+                    ? 'Экстренный вызов'
+                    : 'Shoshilinch chaqiruv'}
+                </a>
               </Button>
             </div>
           </div>

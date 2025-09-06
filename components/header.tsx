@@ -124,7 +124,10 @@ export function Header () {
           <Button
             variant='ghost'
             size='sm'
-            className='md:hidden h-8 w-8 p-0 hover:bg-green-500'
+            className='md:hidden h-8 w-8 p-0 text-foreground transition-colors
+             hover:bg-green-500 hover:text-white
+             dark:hover:bg-green-500 dark:hover:text-white
+             focus:outline-none focus:ring-0'
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? (
@@ -157,7 +160,7 @@ export function Header () {
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <Button
-                        className='hover:bg-green-500'
+                        className='hover:bg-green-500 dark:hover:bg-green-500'
                         variant='ghost'
                         size='sm'
                       >
@@ -166,14 +169,20 @@ export function Header () {
                       </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align='start'>
-                      <DropdownMenuItem onClick={() => setLanguage('ru')}>
+                      <DropdownMenuItem
+                        className='focus:bg-green-500 hover:bg-green-500'
+                        onClick={() => setLanguage('ru')}
+                      >
                         <span
                           className={language === 'ru' ? 'font-semibold' : ''}
                         >
                           Русский
                         </span>
                       </DropdownMenuItem>
-                      <DropdownMenuItem onClick={() => setLanguage('uz')}>
+                      <DropdownMenuItem
+                        className='focus:bg-green-500 hover:bg-green-500'
+                        onClick={() => setLanguage('uz')}
+                      >
                         <span
                           className={language === 'uz' ? 'font-semibold' : ''}
                         >
@@ -185,7 +194,7 @@ export function Header () {
 
                   {/* Theme Toggle Mobile */}
                   <Button
-                    className='hover:bg-green-500'
+                    className='hover:bg-green-500 dark:hover:bg-green-500'
                     variant='ghost'
                     size='sm'
                     onClick={() =>

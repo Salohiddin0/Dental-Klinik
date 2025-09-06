@@ -1,54 +1,58 @@
-"use client"
+'use client'
 
-import { useLanguage } from "@/components/language-provider"
-import { MapPin, Phone, Mail, Clock } from "lucide-react"
+import { useLanguage } from '@/components/language-provider'
+import { MapPin, Phone, Mail, Clock } from 'lucide-react'
 
-export function Footer() {
+export function Footer () {
   const { t, language } = useLanguage()
 
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href)
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+      element.scrollIntoView({ behavior: 'smooth' })
     }
   }
 
   return (
-    <footer className="bg-card border-t border-border">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className='bg-card border-t border-border'>
+      <div className='container mx-auto px-4 py-12'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
           {/* Company Info */}
-          <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="h-8 w-8 rounded-full bg-green-500 flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">DC</span>
+          <div className='space-y-4'>
+            <div className='flex items-center space-x-2'>
+              <div className='h-8 w-8 rounded-full bg-green-500 flex items-center justify-center'>
+                <span className='text-primary-foreground font-bold text-sm'>
+                  DC
+                </span>
               </div>
-              <span className="font-bold text-lg text-card-foreground">
-                {language === "ru" ? "Дентал Клиник" : "Dental Klinik"}
+              <span className='font-bold text-lg text-card-foreground'>
+                {language === 'ru' ? 'Дентал Клиник' : 'Dental Klinik'}
               </span>
             </div>
-            <p className="text-sm text-muted-foreground">
-              {language === "ru"
-                ? "Современная стоматологическая клиника в Фергана с профессиональным подходом к лечению."
+            <p className='text-sm text-muted-foreground'>
+              {language === 'ru'
+                ? 'Современная стоматологическая клиника в Фергана с профессиональным подходом к лечению.'
                 : "Farg'ona shahridagi zamonaviy stomatologiya klinikasi davolashga professional yondashuv bilan."}
             </p>
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-4">
-            <h3 className="font-semibold text-card-foreground">{language === "ru" ? "Навигация" : "Navigatsiya"}</h3>
-            <ul className="space-y-2">
+          <div className='space-y-4'>
+            <h3 className='font-semibold text-card-foreground'>
+              {language === 'ru' ? 'Навигация' : 'Navigatsiya'}
+            </h3>
+            <ul className='space-y-2'>
               {[
-                { key: "nav.home", href: "#home" },
-                { key: "nav.services", href: "#services" },
-                { key: "nav.team", href: "#team" },
-                { key: "nav.reviews", href: "#reviews" },
-                { key: "nav.contacts", href: "#contacts" },
-              ].map((item) => (
+                { key: 'nav.home', href: '#home' },
+                { key: 'nav.services', href: '#services' },
+                { key: 'nav.team', href: '#team' },
+                { key: 'nav.reviews', href: '#reviews' },
+                { key: 'nav.contacts', href: '#contacts' }
+              ].map(item => (
                 <li key={item.key}>
                   <button
                     onClick={() => scrollToSection(item.href)}
-                    className="text-sm text-muted-foreground hover:text-card-foreground transition-colors"
+                    className='text-sm text-muted-foreground hover:text-card-foreground transition-colors'
                   >
                     {t(item.key)}
                   </button>
@@ -58,56 +62,92 @@ export function Footer() {
           </div>
 
           {/* Services */}
-          <div className="space-y-4">
-            <h3 className="font-semibold text-card-foreground">{t("footer.services")}</h3>
-            <ul className="space-y-2">
+          <div className='space-y-4'>
+            <h3 className='font-semibold text-card-foreground'>
+              {t('footer.services')}
+            </h3>
+            <ul className='space-y-2'>
               {[
-                language === "ru" ? "Лечение зубов" : "Tish davolash",
-                language === "ru" ? "Имплантация" : "Implantatsiya",
-                language === "ru" ? "Отбеливание" : "Oqartirish",
-                language === "ru" ? "Ортодонтия" : "Ortodontiya",
-                language === "ru" ? "Детская стоматология" : "Bolalar stomatologiyasi",
+                language === 'ru' ? 'Лечение зубов' : 'Tish davolash',
+                language === 'ru' ? 'Имплантация' : 'Implantatsiya',
+                language === 'ru' ? 'Отбеливание' : 'Oqartirish',
+                language === 'ru' ? 'Ортодонтия' : 'Ortodontiya',
+                language === 'ru'
+                  ? 'Детская стоматология'
+                  : 'Bolalar stomatologiyasi'
               ].map((service, index) => (
                 <li key={index}>
-                  <span className="text-sm text-muted-foreground">{service}</span>
+                  <span className='text-sm text-muted-foreground'>
+                    {service}
+                  </span>
                 </li>
               ))}
             </ul>
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-4">
-            <h3 className="font-semibold text-card-foreground">{t("footer.contacts")}</h3>
-            <div className="space-y-3">
-              <div className="flex items-start space-x-2">
-                <MapPin className="h-4 w-4 text-green-500 mt-0.5" />
-                <span className="text-sm text-muted-foreground">
-                  {language === "ru" ? "Фергана" : "Farg'ona"}
+          <div className='space-y-4'>
+            <h3 className='font-semibold text-card-foreground'>
+              {t('footer.contacts')}
+            </h3>
+            <div className='space-y-3'>
+              <div className='flex items-start space-x-2'>
+                <MapPin className='h-4 w-4 text-green-500 mt-0.5' />
+                <span className='text-sm text-muted-foreground'>
+                  {language === 'ru' ? 'Фергана' : "Farg'ona"}
                 </span>
               </div>
-              <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 text-green-500" />
-                <span className="text-sm text-muted-foreground">+ 998 90 111 222 33</span>
+              <div className='flex items-center space-x-2'>
+                <Phone className='h-4 w-4 text-green-500' />
+                <span className='text-sm text-muted-foreground'>
+                  +998 94 164 77 07
+                </span>
               </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="h-4 w-4 text-green-500" />
-                <span className="text-sm text-muted-foreground">info@dentalclinic.kz</span>
+              <div className='flex items-center space-x-2'>
+                <Mail className='h-4 w-4 text-green-500' />
+                <span className='text-sm text-muted-foreground'>
+                  sulaymonovsaloxiddin092@gmail.com
+                </span>
               </div>
-              <div className="flex items-start space-x-2">
-                <Clock className="h-4 w-4 text-green-500 mt-0.5" />
-                <div className="text-sm text-muted-foreground">
-                  <div>{language === "ru" ? "Пн-Пт: 09:00-20:00" : "Du-Ju: 09:00-20:00"}</div>
-                  <div>{language === "ru" ? "Сб-Вс: 09:00-18:00" : "Sh-Ya: 09:00-18:00"}</div>
+              <div className='flex items-start space-x-2'>
+                <Clock className='h-4 w-4 text-green-500 mt-0.5' />
+                <div className='text-sm text-muted-foreground'>
+                  <div>
+                    {language === 'ru'
+                      ? 'Пн-Пт: 09:00-20:00'
+                      : 'Du-Ju: 09:00-20:00'}
+                  </div>
+                  <div>
+                    {language === 'ru'
+                      ? 'Сб-Вс: 09:00-18:00'
+                      : 'Sh-Ya: 09:00-18:00'}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-border mt-8 pt-8 text-center">
-          <p className="text-sm text-muted-foreground">
-            © 2025 {language === "ru" ? "Дентал Клиник" : "Dental Klinik"}.{" "}
-            {language === "ru" ? "Все права защищены." : "Barcha huquqlar himoyalangan."}
+        <div className='border-t border-border mt-8 pt-8 text-center'>
+          <p className='text-sm text-muted-foreground'>
+            © {new Date().getFullYear()}{' '}
+            {language === 'ru' ? 'Дентал Клиник' : 'Dental Klinik'}.{' '}
+            {language === 'ru'
+              ? 'Все права защищены.'
+              : 'Barcha huquqlar himoyalangan.'}
+          </p>
+          <p className='text-xs text-muted-foreground mt-1'>
+            {language === 'ru' ? 'Сайт разработал' : 'Saytni ishlab chiqqan'}{' '}
+            <span className='font-semibold'>
+              sulaymonov
+              {/* <a
+                href='https://t.me/s_sulaymonov'
+                target='_blank'
+                rel='noopener norefrrer'
+              >
+                sulaymonov
+              </a> */}
+            </span>
           </p>
         </div>
       </div>
