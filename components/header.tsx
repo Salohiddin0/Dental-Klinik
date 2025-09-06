@@ -68,18 +68,30 @@ export function Header () {
             {/* Language Toggle */}
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant='ghost' size='sm' className='h-8 w-8 p-0 hover:bg-green-500'>
+                <Button
+                  variant='ghost'
+                  size='sm'
+                  className='h-8 w-8 p-0 hover:bg-green-500 dark:hover:bg-green-500'
+                >
                   <Globe className='h-4 w-4' />
                   <span className='sr-only'>Toggle language</span>
                 </Button>
               </DropdownMenuTrigger>
+
               <DropdownMenuContent align='end'>
-                <DropdownMenuItem onClick={() => setLanguage('ru')}>
+                <DropdownMenuItem
+                  onClick={() => setLanguage('ru')}
+                  className='focus:bg-green-500 hover:bg-green-500 focus:text-white hover:text-white'
+                >
                   <span className={language === 'ru' ? 'font-semibold' : ''}>
                     Русский
                   </span>
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => setLanguage('uz')}>
+
+                <DropdownMenuItem
+                  onClick={() => setLanguage('uz')}
+                  className='focus:bg-green-500 hover:bg-green-500 focus:text-white hover:text-white'
+                >
                   <span className={language === 'uz' ? 'font-semibold' : ''}>
                     O'zbek
                   </span>
@@ -92,7 +104,7 @@ export function Header () {
               variant='ghost'
               size='sm'
               onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-              className='h-8 w-8 p-0 hover:bg-green-500'
+              className='h-8 w-8 p-0 hover:bg-green-500 dark:hover:bg-green-500'
             >
               <Sun className='h-4 w-4 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0' />
               <Moon className='absolute h-4 w-4 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100' />
@@ -144,13 +156,17 @@ export function Header () {
                   {/* Language Toggle Mobile */}
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                      <Button className='hover:bg-green-500' variant='ghost' size='sm'>
+                      <Button
+                        className='hover:bg-green-500'
+                        variant='ghost'
+                        size='sm'
+                      >
                         <Globe className='h-4 w-4 mr-2' />
                         {language === 'ru' ? 'RU' : 'UZ'}
                       </Button>
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align='start'>
-                      <DropdownMenuItem  onClick={() => setLanguage('ru')}>
+                      <DropdownMenuItem onClick={() => setLanguage('ru')}>
                         <span
                           className={language === 'ru' ? 'font-semibold' : ''}
                         >
@@ -168,7 +184,8 @@ export function Header () {
                   </DropdownMenu>
 
                   {/* Theme Toggle Mobile */}
-                  <Button className='hover:bg-green-500'
+                  <Button
+                    className='hover:bg-green-500'
                     variant='ghost'
                     size='sm'
                     onClick={() =>
